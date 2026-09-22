@@ -1,111 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Goorun Finds | Useful Finds & Everyday Inspiration</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#f8f3ea;color:#24352d;line-height:1.6}
-header{background:#173b32;color:#fff;padding:22px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.logo{font-size:25px;font-weight:bold;letter-spacing:1px}
-nav a{color:#fff;text-decoration:none;margin:0 8px;font-size:14px}
-.hero{text-align:center;padding:80px 20px;background:#eee4d5}
-.hero h1{font-size:44px;letter-spacing:2px;margin-bottom:12px}
-.hero p{max-width:650px;margin:0 auto 25px;color:#526057}
-.button{display:inline-block;background:#173b32;color:#fff;padding:13px 25px;border-radius:4px;text-decoration:none}
-section{padding:55px 7%}
-h2{text-align:center;font-size:30px;margin-bottom:30px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px}
-.card{background:#fff;padding:28px 20px;text-align:center;border-radius:10px;box-shadow:0 5px 18px rgba(0,0,0,.07)}
-.card h3{margin:12px 0;color:#173b32}
-.card p{font-size:14px;color:#66716b}
-.icon{font-size:38px}
-.about{background:#e8ded0;text-align:center}
-.about p{max-width:760px;margin:auto;color:#536057}
-footer{background:#173b32;color:#fff;text-align:center;padding:30px 20px;font-size:13px}
-footer a{color:#e7d5a7;text-decoration:none;margin:0 8px}
-@media(max-width:600px){
-.hero h1{font-size:34px}
-nav{margin-top:12px;width:100%;text-align:center}
-nav a{display:inline-block;margin:5px}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goorun Finds - Professional Magazine & Amazon Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #faf9f6;
+            --card-bg: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #666666;
+            --accent: #2c3e50;
+            --gold: #c5a059;
+            --border: #e2dfd8;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
+        
+        header { background: var(--card-bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--text-main); text-decoration: none; letter-spacing: -0.5px; cursor: pointer; }
+        .logo span { color: var(--gold); }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; font-size: 0.95rem; transition: color 0.2s; cursor: pointer; }
+        .nav-links a:hover, .nav-links a.active { color: var(--text-main); font-weight: 600; }
+        .admin-btn { background: var(--text-main); color: #fff !important; padding: 0.5rem 1rem; border-radius: 4px; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+        
+        .hero { background: var(--card-bg); border: 1px solid var(--border); padding: 3rem 2rem; border-radius: 8px; margin-bottom: 2.5rem; display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items: center; }
+        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1rem; line-height: 1.2; }
+        .hero-content p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .hero-badge { display: inline-block; background: #f0ebe1; color: var(--gold); padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        .section-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--text-main); padding-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: flex-end; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .card-img { width: 100%; height: 200px; object-fit: cover; background: #eee; }
+        .card-body { padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1; }
+        .card-category { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); font-weight: 700; margin-bottom: 0.5rem; }
+        .card-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 0.75rem; line-height: 1.3; }
+        .card-text { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
+        .card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 1rem; margin-top: auto; }
+        .price { font-weight: 700; font-size: 1.1rem; color: var(--text-main); }
+        .btn { display: inline-block; background: var(--text-main); color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: 600; text-align: center; border: none; cursor: pointer; }
+        .btn:hover { background: var(--gold); }
+        .btn-amazon { background: #131921; color: #ff9900; border: 1px solid #ff9900; font-weight: 700; }
+        .btn-amazon:hover { background: #ff9900; color: #131921; }
+
+        .admin-panel { background: var(--card-bg); border: 1px solid var(--border); padding: 2rem; border-radius: 8px; max-width: 700px; margin: 0 auto; }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .form-control { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 4px; font-size: 1rem; background: var(--bg-color); }
+        textarea.form-control { resize: vertical; height: 120px; }
+
+        .page-section { display: none; }
+        .page-section.active { display: block; }
+
+        @media(max-width: 768px) {
+            .hero { grid-template-columns: 1fr; }
+            .nav-links { gap: 1rem; font-size: 0.85rem; }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-<div class="logo">GOORUN FINDS</div>
-<nav>
-<a href="#home">Home</a>
-<a href="#categories">Categories</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
+    <header>
+        <div class="nav-container">
+            <a onclick="switchTab('home')" class="logo">Goorun <span>Finds</span></a>
+            <nav class="nav-links">
+                <a onclick="switchTab('home')" class="active" id="nav-home">Home</a>
+                <a onclick="switchTab('articles')" id="nav-articles">Articles</a>
+                <a onclick="switchTab('products')" id="nav-products">Amazon Finds</a>
+                <a onclick="switchTab('admin')" class="admin-btn" id="nav-admin">⚙️ Admin Panel</a>
+            </nav>
+        </div>
+    </header>
 
-<section class="hero" id="home">
-<h1>Useful Finds. Beautiful Everyday Living.</h1>
-<p>Discover practical products, simple organization ideas, beauty essentials, useful gadgets and thoughtful gift inspiration.</p>
-<a class="button" href="#categories">Explore Finds</a>
-</section>
+    <div class="container">
+        <!-- HOME SECTION -->
+        <div id="section-home" class="page-section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <span class="hero-badge">Curated Amazon Finds</span>
+                    <h1>Discover Exceptional Finds & Stories</h1>
+                    <p>Welcome to Zainab’s professional publishing hub, featuring hand-picked Amazon products, trending lifestyle articles, and daily inspiration.</p>
+                    <button class="btn" onclick="switchTab('products')">Explore Amazon Finds</button>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80" alt="Aesthetic" style="width:100%; border-radius:6px; object-fit:cover; height:220px;">
+                </div>
+            </div>
 
-<section id="categories">
-<h2>Explore Our Finds</h2>
-<div class="grid">
+            <div class="section-title">
+                <h2>Trending Articles & News</h2>
+                <a onclick="switchTab('articles')" style="font-size:0.9rem; color:var(--gold); cursor:pointer; font-weight:600;">View All →</a>
+            </div>
+            <div class="grid" id="home-articles-grid"></div>
 
-<div class="card">
-<div class="icon">🏠</div>
-<h3>Home Finds</h3>
-<p>Useful organization ideas and practical finds for a beautiful, organized home.</p>
-</div>
+            <div class="section-title" style="margin-top: 3rem;">
+                <h2>Featured Amazon Finds</h2>
+                <a onclick="switchTab('products')" style="font-size:0.9rem; color:var(--gold); cursor:pointer; font-weight:600;">View All →</a>
+            </div>
+            <div class="grid" id="home-products-grid"></div>
+        </div>
 
-<div class="card">
-<div class="icon">✨</div>
-<h3>Beauty & Self-Care</h3>
-<p>Beauty storage, self-care essentials and ideas for an organized routine.</p>
-</div>
+        <!-- ARTICLES SECTION -->
+        <div id="section-articles" class="page-section">
+            <div class="section-title"><h2>All Articles & Stories</h2></div>
+            <div class="grid" id="all-articles-grid"></div>
+        </div>
 
-<div class="card">
-<div class="icon">💡</div>
-<h3>Useful Gadgets</h3>
-<p>Interesting everyday gadgets and practical products worth discovering.</p>
-</div>
+        <!-- PRODUCTS SECTION -->
+        <div id="section-products" class="page-section">
+            <div class="section-title"><h2>Amazon Curated Collection</h2></div>
+            <div class="grid" id="all-products-grid"></div>
+        </div>
 
-<div class="card">
-<div class="icon">🎁</div>
-<h3>Gift Ideas</h3>
-<p>Thoughtful and useful gift inspiration for different occasions.</p>
-</div>
+        <!-- ADMIN PANEL SECTION -->
+        <div id="section-admin" class="page-section">
+            <div class="admin-panel">
+                <div class="section-title" style="margin-bottom: 1.5rem;"><h2>Publish New Content / Amazon Product</h2></div>
+                <form id="publish-form" onsubmit="handlePublish(event)">
+                    <div class="form-group">
+                        <label>Content Type</label>
+                        <select id="contentType" class="form-control" onchange="togglePriceField()">
+                            <option value="article">Article / Story</option>
+                            <option value="product">Amazon Product / Find</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Category Name</label>
+                        <input type="text" id="itemCategory" class="form-control" placeholder="e.g. Amazon Gadgets, Home Finds, Tech" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Product / Article Title</label>
+                        <input type="text" id="itemTitle" class="form-control" placeholder="Enter title..." required>
+                    </div>
+                    <div class="form-group" id="price-group" style="display:none;">
+                        <label>Price (e.g. $24.99)</label>
+                        <input type="text" id="itemPrice" class="form-control" placeholder="$0.00">
+                    </div>
+                    <div class="form-group" id="link-group" style="display:none;">
+                        <label>Amazon Affiliate / Buy Link</label>
+                        <input type="url" id="itemLink" class="form-control" placeholder="Paste your Amazon link here (https://amazon.com/...)">
+                    </div>
+                    <div class="form-group">
+                        <label>Image URL</label>
+                        <input type="url" id="itemImage" class="form-control" placeholder="Paste image link here..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Description / Review</label>
+                        <textarea id="itemDesc" class="form-control" placeholder="Write review or description here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%; padding: 1rem; font-size: 1rem;">Publish to Website 🚀</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-</div>
-</section>
+    <script>
+        let posts = JSON.parse(localStorage.getItem('goorun_posts')) || [
+            {
+                id: 1, type: 'article', category: 'Trending',
+                title: 'The Rise of Smart Digital Brands in Modern E-Commerce',
+                image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&q=80',
+                desc: 'How young creators are building independent digital storefronts and media channels with zero initial overhead.', price: '', link: ''
+            },
+            {
+                id: 2, type: 'product', category: 'Amazon Gadgets',
+                title: 'Minimalist Aesthetic Desk Organizer',
+                image: 'https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=600&q=80',
+                desc: 'Elevate your workspace with this premium minimalist organizer designed for ultimate productivity.', price: '$29.99', link: 'https://amazon.com'
+            }
+        ];
 
-<section class="about" id="about">
-<h2>About Goorun Finds</h2>
-<p>
-Welcome to Goorun Finds. We believe that useful things can also be beautiful.
-We bring together practical product discoveries, organization ideas, beauty inspiration,
-everyday gadgets and thoughtful gift ideas to help make everyday life a little easier
-and more organized.
-</p>
-</section>
+        function switchTab(tabId) {
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+            
+            const targetSec = document.getElementById('section-' + tabId);
+            if(targetSec) targetSec.classList.add('active');
+            
+            const targetNav = document.getElementById('nav-' + tabId);
+            if(targetNav) targetNav.classList.add('active');
 
-<section id="contact">
-<h2>Contact Goorun Finds</h2>
-<div class="card">
-<p>Have a question, suggestion or feedback?</p>
-<p>You can contact us for general questions about our content and website.</p>
-</div>
-</section>
+            renderContent();
+            window.scrollTo(0,0);
+        }
 
-<footer>
-<p>© 2026 Goorun Finds. All rights reserved.</p>
-<p>
-<a href="#about">About</a> |
-<a href="#contact">Contact</a>
-</p>
-</footer>
+        function togglePriceField() {
+            const type = document.getElementById('contentType').value;
+            document.getElementById('price-group').style.display = type === 'product' ? 'block' : 'none';
+            document.getElementById('link-group').style.display = type === 'product' ? 'block' : 'none';
+        }
 
+        function handlePublish(e) {
+            e.preventDefault();
+            const type = document.getElementById('contentType').value;
+            const category = document.getElementById('itemCategory').value;
+            const title = document.getElementById('itemTitle').value;
+            const image = document.getElementById('itemImage').value;
+            const desc = document.getElementById('itemDesc').value;
+            const price = type === 'product' ? document.getElementById('itemPrice').value : '';
+            const link = type === 'product' ? document.getElementById('itemLink').value : '';
+
+            const newItem = { id: Date.now(), type, category, title, image, desc, price, link };
+            posts.unshift(newItem);
+            localStorage.setItem('goorun_posts', JSON.stringify(posts));
+
+            alert('Successfully published on your website! 🎉');
+            document.getElementById('publish-form').reset();
+            togglePriceField();
+            switchTab(type === 'product' ? 'products' : 'articles');
+        }
+
+        function renderContent() {
+            const articles = posts.filter(p => p.type === 'article');
+            const products = posts.filter(p => p.type === 'product');
+
+            document.getElementById('home-articles-grid').innerHTML = articles.slice(0, 2).map(artCard).join('') || '<p>No articles yet.</p>';
+            document.getElementById('home-products-grid').innerHTML = products.slice(0, 2).map(prodCard).join('') || '<p>No products yet.</p>';
+            document.getElementById('all-articles-grid').innerHTML = articles.map(artCard).join('') || '<p>No articles published yet.</p>';
+            document.getElementById('all-products-grid').innerHTML = products.map(prodCard).join('') || '<p>No Amazon products published yet.</p>';
+        }
+
+        function artCard(item) {
+            return `
+                <div class="card">
+                    <img src="${item.image}" class="card-img" alt="${item.title}">
+                    <div class="card-body">
+                        <span class="card-category">${item.category}</span>
+                        <h3 class="card-title">${item.title}</h3>
+                        <p class="card-text">${item.desc}</p>
+                        <div class="card-footer">
+                            <span style="font-size:0.8rem; color:var(--text-muted);">Published Today</span>
+                            <button class="btn" onclick="alert('${item.title.replace(/'/g, "")}\\n\\n${item.desc.replace(/'/g, "")}')">Read Story</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function prodCard(item) {
+            const buyLink = item.link ? item.link : '#';
+            return `
+                <div class="card">
+                    <img src="${item.image}" class="card-img" alt="${item.title}">
+                    <div class="card-body">
+                        <span class="card-category">${item.category}</span>
+                        <h3 class="card-title">${item.title}</h3>
+                        <p class="card-text">${item.desc}</p>
+                        <div class="card-footer">
+                            <span class="price">${item.price || ''}</span>
+                            <a href="${buyLink}" target="_blank" class="btn btn-amazon">Buy on Amazon 🛒</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        renderContent();
+    </script>
 </body>
-</html>
+                              </html>
+                              
